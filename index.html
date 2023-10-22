@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APLIKASI PEMESANAN TIKET TRAVEL</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- js -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="jumbotron">
+            <h1>Aplikasi Pemesanan Tiket Travel</h1>
+            <p>
+                "Keseruan perjalananmu dimulai dari sini! Kami tidak hanya menjual tiket, tapi juga memberikanmu kisah seru yang tak terlupakan. Klik <a href="#pesanSekarang">'Pesan Sekarang'</a> dan jadikan tas mu siap untuk petualangan tak terlupakan!"
+            </p>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                  <a href="#Home">Home</a>
+                </li>
+                <li>
+                  <a href="#About">About</a>
+                </li>
+                <li class="pesan">
+                    <a href="#pesanSekarang">Pesan Sekarang</a>
+                </li>
+              </ul>
+        </nav>
+    </header>
+
+    <!-- Kontent Utama -->
+    <main>
+        <div id="pesanSekarang">
+            <h3>Pesan Tiket Travel</h3>
+        </div>
+        <div id="container">
+            <form action="orderForm">
+                <label for="nama">Nama</label>
+            <input type="text" id="nama" required>
+
+            <label for="tujuan">Tujuan</label>
+            <select id="">
+                <option value="bali">Bali</option>
+                <option value="bandung">Bandung</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="lombok">Lombok</option>
+                <option value="yogyakarta">Yogyakarta</option>
+            </select>
+
+            <label for="harga">Harga Tiket:</label>
+            <input type="number" id="harga" required>
+
+            <label for="jumlahTiket">Jumlah Tiket:</label>
+            <select id="jumlahTiket">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="member">Member:</label>
+            <input type="checkbox" id="member">
+
+            <label for="diskon">Diskon (%):</label>
+            <input type="number" id="diskon">
+
+            <label for="totalBayar">Total Bayar:</label>
+            <input type="text" id="totalBayar" disabled>
+
+            <button type="button" onclick="hitungTotal()">Hitung Total</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+</body>
+</html>
